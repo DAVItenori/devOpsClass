@@ -17,9 +17,7 @@ jobs:
         node-version: '18.x'
 
     - name: Install dependencies
-      run: |
-        npm ci
-        chmod -R +x node_modules/.bin/  # Fix de permissões global
+      run: npm ci
 
     - name: Run Tests
       run: npm test
