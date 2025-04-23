@@ -6,21 +6,21 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
 
-    steps: 
+    steps:
     - uses: actions/checkout@v3
 
-    -name: Use Node.js
-    uses: actions/setup-node@v1
-    with:
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
         node-version: '18.x'
 
-    -name: Install Dependencies
-    run: npm install
+    - name: Install Dependencies
+      run: npm install
 
-    -name: Run Tests
-    run: npm test
+    - name: Run Tests
+      run: npm test
 
-    -name: Build 
-    run: npm run buld
+    - name: Build
+      run: npm run build
